@@ -16,7 +16,9 @@ export function Todos({todos}){
                         headers:{
                             'Content-Type':'application/json',
                         }
-                    }) .then(() => console.log('Request completed'))
+                    }) .then(() => {console.log('Request completed');
+                                     window.location.reload();
+                                   })
                     .catch(error => console.log('Error:', error));  
                     }}>{todo.completed ? "Completed" : "Mark as Complete" }</button>
                     </div>
